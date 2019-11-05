@@ -6,3 +6,5 @@ client.connect('192.168.1.206',22,'root','1')
 res = client.exec_command('netstat -an')[1].read().decode()
 
 [ print (i) for i in res.split("\n") if i.startswith('tcp') ]
+
+
