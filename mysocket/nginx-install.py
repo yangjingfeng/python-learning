@@ -22,8 +22,6 @@ class CCmd():
         else:
             return (stdout.channel.recv_exit_status(),stderr.read().decode())
 
-
-
 mytest01 = CCmd('192.168.1.226','22','root','1')
 if mytest01.exec('[ -f nginx-1.13.12.tar.gz ]')[0] == 0:
     res = mytest01.exec('tar -xf nginx-1.13.12.tar.gz')
